@@ -1,0 +1,75 @@
+
+spring:
+  config:
+    activate:
+      on-profile: local
+  devtools:
+    livereload:
+      enabled: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  jpa:
+    defer-datasource-initialization: false
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.MariaDB103Dialect
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDB103Dialect
+  datasource:
+    hikari:
+      driver-class-name: org.mariadb.jdbc.Driver
+      jdbc-url: jdbc:mariadb://localhost:3306/nuriclass_dev_db?allowMultiQueries=true
+      username: nuriclass_user
+      password: nuriclass_pass1!
+
+server:
+  port: 8089
+  tomcat:
+    remoteip:
+      remote-ip-header: X-Forwarded-For
+      protocol-header: X-Forwarded-Proto
+      port-header: X-Forwarded-Port
+    use-relative-redirects: true
+    error:
+      include-exception: false
+      include-stacktrace: never
+      include-message: never
+
+
+logging:
+  level:
+    root: debug
+    '[jdk.event.security]': info
+    '[jdk.internal.httpclient.debug]': info
+    '[sun.rmi.transport.tcp]': info
+    '[sun.rmi.loader]': info
+    '[io.lettuce.core.protocol.DefaultEndpoint]': info
+    '[io.lettuce.core.protocol.CommandHandler]': info
+    '[io.lettuce.core.protocol.CommandEncoder]': info
+    '[io.lettuce.core.protocol.RedisStateMachine]': info
+    '[org.mongodb.driver.cluster]': info
+    '[org.mongodb.driver.connection]': info
+    '[org.mongodb.driver.protocol.command]': info
+    '[org.springframework.data.redis.core.RedisConnectionUtils]': info
+    '[org.springframework.session.data.redis.RedisSessionExpirationPolicy]': info
+    '[io.lettuce.core.RedisChannelHandler]': info
+    '[javax.management.remote.rmi]': info
+    '[org.thymeleaf.TemplateEngine.CONFIG]': info
+    '[org.apache.http.headers]': info
+    '[org.apache.http.wire]': info
+    '[com.zaxxer.hikari.pool.HikariPool]': info
+    '[org.eclipse.jetty.http.HttpParser]': info
+    '[org.eclipse.jetty.util.thread.QueuedThreadPool]': info
+    '[org.eclipse.jetty.io.ManagedSelector]': info
+    '[org.eclipse.jetty.io.ChannelEndPoint]': info
+    '[org.eclipse.jetty.server.HttpConnection]': info
+    '[org.eclipse.jetty.server.HttpChannel]': info
+    '[org.eclipse.jetty.server.HttpInput]': info
+    '[org.apache.catalina.session.ManagerBase]': info
+    '[org.apache.coyote.http11.Http11InputBuffer]': info
+    '[org.apache.jena.sparql.core.mem.PMapQuadTable]': info
+    '[org.apache.jena.sparql.core.mem.PMapTripleTable]': info
+    '[org.springframework.boot.devtools.livereload.Connection]': info
