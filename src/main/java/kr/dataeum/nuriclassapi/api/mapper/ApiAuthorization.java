@@ -10,8 +10,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Base64.Encoder;
 
-import org.apache.tomcat.util.json.JSONParser;
-import org.json.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -54,9 +54,8 @@ public class ApiAuthorization {
             while((inputLine = in.readLine()) != null) { // response 출력
                 result += inputLine;
             }
-            //TODO
-//            JSONParser parser = new JSONParser();
-//            jsonResult = (JSONObject) parser.parse(result);
+            JSONParser parser = new JSONParser();
+            jsonResult = (JSONObject) parser.parse(result);
         } catch (Exception e) {
             LOGGER.error("access_token 생성중 에러발생");
             e.printStackTrace();

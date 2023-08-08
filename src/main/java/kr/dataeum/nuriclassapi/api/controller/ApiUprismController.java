@@ -4,7 +4,7 @@ import kr.dataeum.nuriclassapi.api.mapper.ApiAuthorization;
 import kr.dataeum.nuriclassapi.api.mapper.ApiSender;
 import kr.dataeum.nuriclassapi.common.controller.CommonDefaultController;
 import lombok.RequiredArgsConstructor;
-import org.json.JSONObject;
+import org.json.simple.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;

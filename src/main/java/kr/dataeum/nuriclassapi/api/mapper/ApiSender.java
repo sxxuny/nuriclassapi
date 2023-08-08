@@ -1,7 +1,7 @@
 package kr.dataeum.nuriclassapi.api.mapper;
 
-import org.apache.tomcat.util.json.JSONParser;
-import org.json.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.*;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
@@ -37,10 +37,8 @@ public class ApiSender {
             while((inputLine = in.readLine()) != null) { // response 출력
                 result += inputLine;
             }
-
-            //TODO
-//            JSONParser parser = new JSONParser();
-//            jsonResult = (JSONObject) parser.parse(result);
+            JSONParser parser = new JSONParser();
+            jsonResult = (JSONObject) parser.parse(result);
         } catch (Exception e) {
             e.printStackTrace();
         }
