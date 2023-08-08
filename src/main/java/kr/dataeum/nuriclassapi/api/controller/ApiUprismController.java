@@ -19,8 +19,8 @@ public class ApiUprismController extends CommonDefaultController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ApiUprismController.class);
 
-    ApiAuthorization apiAuthorization;
-    ApiSender apiSender;
+    private final ApiAuthorization apiAuthorization;
+    private final ApiSender apiSender;
 
     /**
      * roomId 로 회의에 접속한 리스트를 조회해오는 API
