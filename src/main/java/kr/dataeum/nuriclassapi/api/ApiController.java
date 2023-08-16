@@ -1,6 +1,6 @@
 package kr.dataeum.nuriclassapi.api;
 
-import kr.dataeum.nuriclassapi.api.dto.ApiResult;
+import kr.dataeum.nuriclassapi.module.ApiResult;
 import kr.dataeum.nuriclassapi.common.controller.CommonDefaultController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;

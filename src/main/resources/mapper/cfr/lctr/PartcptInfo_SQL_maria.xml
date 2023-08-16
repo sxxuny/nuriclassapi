@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.dataeum.nuriclassapi.module.service.impl.PartcptInfoMapper">
+
+    <!-- 실시간강연참가정보 등록수정  -->
+    <insert id="insertUpdatePartcptInfo">
+        INSERT INTO DTN_RLTM_LCTR_PARTCPT_INFO (
+            LCTR_ID
+            ,UPRISM_ID
+            ,ADHRNC_USER_ID
+            ,ADHRNC_USER_NM
+            ,PARTCPT_DE
+            ,PARTCPT_TIME
+            ,END_TIME
+            ,PROG_TIME
+        )
+        SELECT
+            rlpl.LCTR_ID
+             ,rlpl.UPRISM_ID
+             ,rlpl.UPRISM_ID AS ADHRNC_USER_ID
+             ,rlpl.NAME AS ADHRNC_USER_NM
+             ,DATE_FORMAT(rlpl.START_DATE,'%Y%m%d') AS PARTCPT_DE
+             ,DATE_FORMAT(rlpl.START_DATE,'%H%i%s') AS PARTCPT_TIME
+             ,DATE_FORMAT(rlpl.END_DATE,'%H%i%s') AS END_TIME
+             ,rlpl.PROG_TIME AS PROG_TIME
+        FROM DTN_RLTM_LCTR_PARTCPT_LOG rlpl ON DUPLICATE KEY UPDATE  PROG_TIME = rlpl.PROG_TIME ,END_TIME = DATE_FORMAT(rlpl.END_DATE,'%H%i%s')
+    </insert>
+
+</mapper>

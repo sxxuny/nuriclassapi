@@ -30,7 +30,7 @@ public class DatasourceConfig {
 		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
 		sqlSessionFactoryBean.setDataSource(dataSource);
 		sqlSessionFactoryBean.setTypeAliasesPackage("kr.dataeum.nuriclassapi");
-		sqlSessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath*:mapper/**/*-mapper.xml"));
+		sqlSessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath*:mapper/**/*_SQL_maria.xml"));
 
 		sqlSessionFactoryBean.getObject().getConfiguration().setMapUnderscoreToCamelCase(true);
 		return sqlSessionFactoryBean.getObject();

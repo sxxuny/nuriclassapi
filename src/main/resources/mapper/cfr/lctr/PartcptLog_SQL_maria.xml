@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.dataeum.nuriclassapi.module.service.impl.PartcptLogMapper">
+
+    <!-- 실시간강연참가로그 insert  -->
+    <insert id="insertUserLog" parameterType="java.util.List">
+        INSERT INTO DTN_RLTM_LCTR_PARTCPT_LOG (
+            LCTR_ID
+            ,UPRISM_ID
+            ,NAME
+            ,START_DATE
+            ,END_DATE
+            ,LOG_DATE
+            ,PROG_TIME
+        ) VALUES
+        <foreach collection="list" item="item" separator=",">
+            (
+            #{item.lctrId}
+            ,#{item.userId}
+            ,#{item.name}
+            ,CONCAT(SUBSTR(#{item.startDate},1,10),' ',SUBSTR(#{item.startDate},15))
+            ,CONCAT(SUBSTR(#{item.endDate},1,10),' ',SUBSTR(#{item.endDate},15))
+            ,CONCAT(SUBSTR(#{item.logDate},1,10),' ',SUBSTR(#{item.logDate},15))
+            ,#{item.progTime}
+            )
+        </foreach>
+    </insert>
+
+    <!-- 실시간강연참가로그 delete  -->
+    <delete id="deletePartcptLog">
+        DELETE FROM DTN_RLTM_LCTR_PARTCPT_LOG
+    </delete>
+
+</mapper>

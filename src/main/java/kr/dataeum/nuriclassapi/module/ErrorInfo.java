@@ -1,4 +1,4 @@
-package kr.dataeum.nuriclassapi.api.dto;
+package kr.dataeum.nuriclassapi.module;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,10 +1,11 @@
-package kr.dataeum.nuriclassapi.api.dto;
+package kr.dataeum.nuriclassapi.module;
 
+import kr.dataeum.nuriclassapi.module.uprism.UserLog;
 import lombok.Getter;
 import lombok.Setter;
 import org.apache.commons.collections4.map.ListOrderedMap;
 
-import java.util.List;
+import java.util.*;
 
 @Getter
 @Setter
@@ -12,7 +13,9 @@ public class ApiResult {
 
 	private boolean isSuccess = false;
 
+	private String code;
 	private String message;
+	private Map<String, List<UserLog>> response;
 
 	private ListOrderedMap data;
 

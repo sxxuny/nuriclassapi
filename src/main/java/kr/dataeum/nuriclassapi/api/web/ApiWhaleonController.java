@@ -1,4 +1,4 @@
-package kr.dataeum.nuriclassapi.api.controller;
+package kr.dataeum.nuriclassapi.api.web;
 
 import kr.dataeum.nuriclassapi.common.controller.CommonDefaultController;
 import lombok.RequiredArgsConstructor;

@@ -1,7 +1,0 @@
-package kr.dataeum.nuriclassapi.api.mapper.cfr.lctr;
-
-import org.apache.ibatis.annotations.Mapper;
-
-@Mapper
-public interface PartcptLogMapper {
-}

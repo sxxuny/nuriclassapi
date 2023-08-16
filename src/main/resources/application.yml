@@ -21,9 +21,14 @@ spring:
   datasource:
     hikari:
       driver-class-name: org.mariadb.jdbc.Driver
-      jdbc-url: jdbc:mariadb://localhost:3306/nuriclass_dev_db?allowMultiQueries=true
-      username: nuriclass_user
-      password: nuriclass_pass1!
+      jdbc-url: jdbc:mariadb://192.168.0.222:3306/nuri_ittdev2022_db?allowMultiQueries=true
+      username: nuri_ittdev2022_user
+      password: nuri_ittdev2022_pass1!
+
+mybatis:
+  type-aliases-package: kr.dataeum.nuriclassapi
+  mapper-location:
+    classpath: mapper/**/*_SQL_maria.xml
 
 server:
   port: 8089

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.dataeum.nuriclassapi.module.service.impl.ProgrsRltmLctrMapper">
+
+    <!-- 진행한 실시간 강연 목록 -->
+    <select id="selectProgrsRltmLctrList" parameterType="kr.dataeum.nuriclassapi.module.ProgrsRltmLctr" resultType="kr.dataeum.nuriclassapi.module.ProgrsRltmLctr">
+        SELECT
+            dprl.LCTR_PROGRS_DE
+            ,dprl.ROOM_ID
+            ,dprl.LCTR_ID
+        FROM DTN_PROGRS_RLTM_LCTR dprl
+        <where>
+            AND dprl.LCTR_PROGRS_DE = #{lctrProgrsDe}
+            <!--<if test="@kr.dataeum.nuriclassapi.common.util@isNotEmpty(lctrProgrsDe)">
+                AND dprl.LCTR_PROGRS_DE = #{lctrProgrsDe}
+            </if>-->
+        </where>
+    </select>
+
+    <!-- 진행한 실시간 강연 목록 where  -->
+    <!--<sql id="selectProgrsRltmLctrListWhere">
+        <where>
+            <if test="@kr.dataeum.nuriclassapi.util.MybatisUtil@isNotEmpty(lctrProgrsDe)">
+                AND dprl.LCTR_PROGRS_DE = #{lctrProgrsDe}
+            </if>
+            <if test="@kr.dataeum.nuriclassapi.util.MybatisUtil@isNotEmpty(roomId)">
+                AND dprl.ROOM_ID = #{roomId}
+            </if>
+            <if test="@kr.dataeum.nuriclassapi.util.MybatisUtil@isNotEmpty(lctrId)">
+                AND dprl.LCTR_ID = #{lctrId}
+            </if>
+        </where>
+    </sql>-->
+
+</mapper>
