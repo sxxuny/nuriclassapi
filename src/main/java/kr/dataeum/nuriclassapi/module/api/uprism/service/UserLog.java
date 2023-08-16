@@ -1,4 +1,4 @@
-package kr.dataeum.nuriclassapi.module.uprism;
+package kr.dataeum.nuriclassapi.module.api.uprism.service;
 
 import lombok.Getter;
 import lombok.Setter;

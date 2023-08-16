@@ -1,4 +1,4 @@
-package kr.dataeum.nuriclassapi.module.service.impl;
+package kr.dataeum.nuriclassapi.module.api.uprism;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import kr.dataeum.nuriclassapi.module.ApiResult;

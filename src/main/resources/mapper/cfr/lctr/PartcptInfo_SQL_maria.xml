@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="kr.dataeum.nuriclassapi.module.service.impl.PartcptInfoMapper">
+<mapper namespace="kr.dataeum.nuriclassapi.module.cfr.lctr.service.impl.PartcptInfoMapper">
 
     <!-- 실시간강연참가정보 등록수정  -->
     <insert id="insertUpdatePartcptInfo">

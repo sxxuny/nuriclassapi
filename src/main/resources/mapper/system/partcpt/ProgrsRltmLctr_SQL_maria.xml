@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="kr.dataeum.nuriclassapi.module.service.impl.ProgrsRltmLctrMapper">
+<mapper namespace="kr.dataeum.nuriclassapi.module.system.partcpt.service.impl.ProgrsRltmLctrMapper">
 
     <!-- 진행한 실시간 강연 목록 -->
-    <select id="selectProgrsRltmLctrList" parameterType="kr.dataeum.nuriclassapi.module.ProgrsRltmLctr" resultType="kr.dataeum.nuriclassapi.module.ProgrsRltmLctr">
+    <select id="selectProgrsRltmLctrList" parameterType="kr.dataeum.nuriclassapi.module.system.partcpt.service.ProgrsRltmLctr" resultType="kr.dataeum.nuriclassapi.module.system.partcpt.service.ProgrsRltmLctr">
         SELECT
             dprl.LCTR_PROGRS_DE
             ,dprl.ROOM_ID

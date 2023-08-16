@@ -1,6 +1,6 @@
 package kr.dataeum.nuriclassapi.module;
 
-import kr.dataeum.nuriclassapi.module.uprism.UserLog;
+import kr.dataeum.nuriclassapi.module.api.uprism.service.UserLog;
 import lombok.Getter;
 import lombok.Setter;
 import org.apache.commons.collections4.map.ListOrderedMap;

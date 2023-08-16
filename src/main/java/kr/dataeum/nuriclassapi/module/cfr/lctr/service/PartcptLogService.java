@@ -1,12 +1,13 @@
-package kr.dataeum.nuriclassapi.module.service;
+package kr.dataeum.nuriclassapi.module.cfr.lctr.service;
 
 import kr.dataeum.nuriclassapi.module.ApiResult;
-import kr.dataeum.nuriclassapi.module.service.impl.ApiAuthorization;
-import kr.dataeum.nuriclassapi.module.service.impl.ApiSender;
-import kr.dataeum.nuriclassapi.module.service.impl.PartcptLogMapper;
-import kr.dataeum.nuriclassapi.module.uprism.UserLog;
-import kr.dataeum.nuriclassapi.module.ProgrsRltmLctr;
-import kr.dataeum.nuriclassapi.module.service.impl.PartcptInfoMapper;
+import kr.dataeum.nuriclassapi.module.api.uprism.auth.ApiAuthorization;
+import kr.dataeum.nuriclassapi.module.api.uprism.ApiSender;
+import kr.dataeum.nuriclassapi.module.cfr.lctr.service.impl.PartcptLogMapper;
+import kr.dataeum.nuriclassapi.module.api.uprism.service.UserLog;
+import kr.dataeum.nuriclassapi.module.system.partcpt.service.ProgrsRltmLctrService;
+import kr.dataeum.nuriclassapi.module.system.partcpt.service.ProgrsRltmLctr;
+import kr.dataeum.nuriclassapi.module.cfr.lctr.service.impl.PartcptInfoMapper;
 import lombok.RequiredArgsConstructor;
 import org.json.simple.JSONObject;
 import org.springframework.stereotype.Service;

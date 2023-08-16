@@ -1,4 +1,4 @@
-package kr.dataeum.nuriclassapi.module.service.impl;
+package kr.dataeum.nuriclassapi.module.api.uprism.auth;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

@@ -1,7 +1,6 @@
-package kr.dataeum.nuriclassapi.module.service;
+package kr.dataeum.nuriclassapi.module.system.partcpt.service;
 
-import kr.dataeum.nuriclassapi.module.ProgrsRltmLctr;
-import kr.dataeum.nuriclassapi.module.service.impl.ProgrsRltmLctrMapper;
+import kr.dataeum.nuriclassapi.module.system.partcpt.service.impl.ProgrsRltmLctrMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

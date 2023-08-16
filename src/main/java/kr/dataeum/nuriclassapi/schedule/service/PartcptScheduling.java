@@ -1,6 +1,6 @@
 package kr.dataeum.nuriclassapi.schedule.service;
 
-import kr.dataeum.nuriclassapi.module.service.PartcptLogService;
+import kr.dataeum.nuriclassapi.module.cfr.lctr.service.PartcptLogService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;

@@ -1,4 +1,4 @@
-package kr.dataeum.nuriclassapi.module;
+package kr.dataeum.nuriclassapi.module.api.whaleon.service;
 
 import lombok.Getter;
 import lombok.Setter;

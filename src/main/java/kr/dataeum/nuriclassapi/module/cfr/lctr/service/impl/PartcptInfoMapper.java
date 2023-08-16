@@ -1,4 +1,4 @@
-package kr.dataeum.nuriclassapi.module.service.impl;
+package kr.dataeum.nuriclassapi.module.cfr.lctr.service.impl;
 
 import org.apache.ibatis.annotations.Mapper;
 

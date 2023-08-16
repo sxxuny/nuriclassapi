@@ -1,6 +1,6 @@
-package kr.dataeum.nuriclassapi.module.service.impl;
+package kr.dataeum.nuriclassapi.module.cfr.lctr.service.impl;
 
-import kr.dataeum.nuriclassapi.module.uprism.UserLog;
+import kr.dataeum.nuriclassapi.module.api.uprism.service.UserLog;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.*;
