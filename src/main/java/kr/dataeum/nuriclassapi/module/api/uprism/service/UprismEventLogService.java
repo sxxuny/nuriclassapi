@@ -34,7 +34,7 @@ public class UprismEventLogService {
 
         ProgrsRltmLctr progrsRltmLctr = new ProgrsRltmLctr();
 //        progrsRltmLctr.setLctrProgrsDe(yesterDay);
-        progrsRltmLctr.setLctrProgrsDe("20220420");
+        progrsRltmLctr.setLctrProgrsDe("20220420"); //test
 
         List<ProgrsRltmLctr> progrsRltmLctrlist = progrsRltmLctrService.selectProgrsRltmLctrList(progrsRltmLctr);
         JSONObject jsonObj  = apiAuthorization.getAccessToken();
@@ -46,7 +46,7 @@ public class UprismEventLogService {
             int index = 0;
             for(ProgrsRltmLctr prl : progrsRltmLctrlist) {
 //                ApiResult apiResult = apiSender.sendGet( "v1/userlogs/roomid/"+prl.getRoomId(), accessToken);//유프리즘 userLogs api사용
-                ApiResult apiResult = apiSender.sendGet( "v1/userlogs/roomid/37700BCB-00C5-409C-8746-BBC7C8B68CD7", accessToken);//유프리즘 userLogs api사용
+                ApiResult apiResult = apiSender.sendGet( "v1/userlogs/roomid/37700BCB-00C5-409C-8746-BBC7C8B68CD7", accessToken);//test
                 List<UserLog> userLogList = apiResult.getResponse().get("data");
 
                 for(UserLog userLog : userLogList) {
