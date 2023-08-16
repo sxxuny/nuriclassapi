@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class CrseWhaleonEventLog {
+public class WhaleonEventLog {
     private String partcptInfoId;//참가정보Id
     private String progrmId;//프로그램ID
     private String adhrncUserId;//유저ID
